@@ -1,5 +1,0 @@
-D:\DWDProd\TwilioSalesforce\Automation\Auto.DataProvider\bin\Debug\Auto.DataProvider.dll
-D:\DWDProd\TwilioSalesforce\Automation\Auto.DataProvider\bin\Debug\Auto.DataProvider.pdb
-D:\DWDProd\TwilioSalesforce\Automation\Auto.DataProvider\obj\Debug\Auto.DataProvider.csprojResolveAssemblyReference.cache
-D:\DWDProd\TwilioSalesforce\Automation\Auto.DataProvider\obj\Debug\Auto.DataProvider.dll
-D:\DWDProd\TwilioSalesforce\Automation\Auto.DataProvider\obj\Debug\Auto.DataProvider.pdb
