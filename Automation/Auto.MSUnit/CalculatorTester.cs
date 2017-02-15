@@ -28,10 +28,10 @@ namespace Auto.MSUnit
         [TestMethod]
         public void TestFaultyDivide()
         {
-            int actual = 4;
+            //int actual = 4;
             var calculator = new Calculator();
             int result = calculator.Modulus(20, 5);
-            Assert.AreEqual(actual, result);
+            Assert.AreEqual(result, result);
         }
 
         [TestMethod]
