@@ -28,7 +28,7 @@ namespace Auto.DataProvider
             return (T)((dynamic)a - (dynamic)b);
         }
 
-        public T Modulus<T>(T a, T b)
+        public T Modulus<T>(T a, T b )
         
             return (T)((dynamic)a % (dynamic)b);
         
