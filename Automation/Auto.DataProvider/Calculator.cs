@@ -29,7 +29,7 @@ namespace Auto.DataProvider
         }
 
         public T Modulus<T>(T a, T b)
-        {
+        
             return (T)((dynamic)a % (dynamic)b);
         
     }
