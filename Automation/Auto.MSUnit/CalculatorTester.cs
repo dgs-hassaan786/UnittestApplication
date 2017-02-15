@@ -5,7 +5,7 @@ using Auto.DataProvider;
 namespace Auto.MSUnit
 {
     [TestClass]
-    public class UnitTest1
+    public class CalculatorTester
     {
         [TestMethod]
         public void TestAdd()
@@ -42,6 +42,5 @@ namespace Auto.MSUnit
             var result = calculator.Multiply(1.3, 1.6);
             Assert.AreEqual(actual, result);
         }
-
     }
 }
