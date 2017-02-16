@@ -35,7 +35,6 @@ namespace Auto.NUnitTest
             
             var calculator = new Calculator();
             int result = calculator.Modulus(20, 5);
-            
             //int actual = 4;
             //Assert.AreEqual(actual, result);
             Assert.AreEqual(result, result);
