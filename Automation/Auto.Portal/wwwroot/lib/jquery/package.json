@@ -2,7 +2,7 @@
   "_args": [
     [
       "jquery@3.1.1",
-      "C:\\Users\\Ghazanfer.Khan\\Documents\\Visual Studio 2015\\Projects\\UnittestApplication\\Automation\\Auto.Portal"
+      "D:\\Stuff_Provided_To_Team\\Testing_activity\\Unit_Testing\\UnittestApplication\\Automation\\Auto.Portal"
     ]
   ],
   "_from": "jquery@3.1.1",
@@ -35,7 +35,7 @@
   "_shasum": "347c1c21c7e004115e0a4da32cece041fad3c8a3",
   "_shrinkwrap": null,
   "_spec": "jquery@3.1.1",
-  "_where": "C:\\Users\\Ghazanfer.Khan\\Documents\\Visual Studio 2015\\Projects\\UnittestApplication\\Automation\\Auto.Portal",
+  "_where": "D:\\Stuff_Provided_To_Team\\Testing_activity\\Unit_Testing\\UnittestApplication\\Automation\\Auto.Portal",
   "author": {
     "name": "jQuery Foundation and other contributors",
     "url": "https://github.com/jquery/jquery/blob/3.1.1/AUTHORS.txt"

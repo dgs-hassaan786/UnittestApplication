@@ -2,7 +2,7 @@
   "_args": [
     [
       "bootstrap@3.3.7",
-      "C:\\Users\\Ghazanfer.Khan\\Documents\\Visual Studio 2015\\Projects\\UnittestApplication\\Automation\\Auto.Portal"
+      "D:\\Stuff_Provided_To_Team\\Testing_activity\\Unit_Testing\\UnittestApplication\\Automation\\Auto.Portal"
     ]
   ],
   "_from": "bootstrap@3.3.7",
@@ -35,7 +35,7 @@
   "_shasum": "5a389394549f23330875a3b150656574f8a9eb71",
   "_shrinkwrap": null,
   "_spec": "bootstrap@3.3.7",
-  "_where": "C:\\Users\\Ghazanfer.Khan\\Documents\\Visual Studio 2015\\Projects\\UnittestApplication\\Automation\\Auto.Portal",
+  "_where": "D:\\Stuff_Provided_To_Team\\Testing_activity\\Unit_Testing\\UnittestApplication\\Automation\\Auto.Portal",
   "author": {
     "name": "Twitter, Inc."
   },
