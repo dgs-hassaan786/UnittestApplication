@@ -1,13 +1,17 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Auto.DataProvider;
+﻿using Auto.DataProvider;
+using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Auto.MSUnit
+namespace Auto.NUnitTest
 {
-    [TestClass]
-    public class CalculatorTester
+    [TestFixture]
+    class CalculatorTester
     {
-        [TestMethod]
+        [TestCase]
         public void TestAdd()
         {
             int actual = 6;
@@ -16,25 +20,27 @@ namespace Auto.MSUnit
             Assert.AreEqual(actual, result);
         }
 
-        [TestMethod]
+        [TestCase]
         public void TestDivide()
         {
             int actual = 4;
             var calculator = new Calculator();
-            int result = calculator.Divide(20,5);
+            int result = calculator.Divide(20, 5);
             Assert.AreEqual(actual, result);
         }
 
-        [TestMethod]
+        [TestCase]
         public void TestFaultyDivide()
         {
-            //int actual = 4;
+            
             var calculator = new Calculator();
             int result = calculator.Modulus(20, 5);
+            //int actual = 4;
+            //Assert.AreEqual(actual, result);
             Assert.AreEqual(result, result);
         }
 
-        [TestMethod]
+        [TestCase]
         public void TestMultiply()
         {
             var actual = 2.08;
