@@ -49,7 +49,7 @@ describe('Users factory', function () {
         Users = _Users_;
     }));
     // A simple test to verify the Users factory exists
-    it('should exist', function () {
+    it('User factory should exist', function () {
         expect(Users).toBeDefined();
     });
 
@@ -81,4 +81,73 @@ describe('Users factory', function () {
     });
 
 
+});
+
+
+describe('Users Controller', function () {
+    var $controller, UsersController, UsersFactory , scope;
+
+    // Mock the list of users we expect to use in our controller
+    var userList = [
+      { id: '1', name: 'Jane', role: 'Designer', location: 'New York', twitter: 'gijane' },
+      { id: '2', name: 'Bob', role: 'Developer', location: 'New York', twitter: 'billybob' },
+      { id: '3', name: 'Jim', role: 'Developer', location: 'Chicago', twitter: 'jimbo' },
+      { id: '4', name: 'Bill', role: 'Designer', location: 'LA', twitter: 'dabill' }
+    ];
+
+
+    // Before each test load our api.users module
+    beforeEach(angular.mock.module('my_app'));
+
+    // Inject the $controller service to create instances of the controller (UsersController) we want to test
+    beforeEach(inject(function (_$controller_, _Users_, $rootScope) {
+        $controller = _$controller_;
+        UsersFactory = _Users_;
+
+        // Spy and force the return value when UsersFactory.all() is called
+        spyOn(UsersFactory, 'all').and.callFake(function () {
+            return userList;
+        });
+
+        // Create a new scope that's a child of the $rootScope
+        scope = $rootScope.$new();
+        UsersController = $controller('UsersCtrl', { $scope: scope, Users: UsersFactory });
+    }));
+
+    // Verify our controller exists
+    it('Users controller should be defined', function () {
+        expect(UsersController).toBeDefined();
+    });
+
+    // Add a new test for our expected controller behavior
+    it('should initialize with a call to Users.all()', function () {
+        expect(UsersFactory.all).toHaveBeenCalled();
+        expect(scope.users).toEqual(userList);
+    });
+
+    // Number Addition
+    it("should double the numbers", function () {
+        scope.doubleIt();
+        expect(scope.x).toBe(6);
+    });
+});
+describe('BAC User factory', function () {
+    var BACUsersFactory, $q, $httpBackend;
+
+    // Add Pokeapi endpoint
+    var API = 'http://localhost:7256/user/';
+    // Before each test load our api.users module
+    beforeEach(angular.mock.module('my_app'));
+    // Before each test set our injected Users factory (_Users_) to our local Users variable
+    beforeEach(inject(function (_BACUsersFactory_, _$q_, _$httpBackend_) {
+        BACUsersFactory = _BACUsersFactory_;
+        $q = _$q_;
+        $httpBackend = _$httpBackend_;
+    }));
+
+    // A simple test to verify the Users factory exists
+    it('BAC User factory should be defined', function () {
+        expect(BACUsersFactory).toBeDefined();
+    });
+   
 });
