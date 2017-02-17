@@ -20,5 +20,19 @@
     },
     // Optinally generate .map file
     "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/app.min.js",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      "wwwroot/js/app.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/app/User/user.min.js",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      "wwwroot/js/app/User/user.js"
+    ]
   }
 ]
