@@ -10,7 +10,7 @@ namespace Auto.SelenuimTester.Repositories
 {
 
 
-    class BacSetMethods
+    class BacProvider
     {
         public static void Set(IWebDriver driver, string element, ItemType type, Actions action, string value = "")
         {

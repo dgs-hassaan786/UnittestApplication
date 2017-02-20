@@ -59,33 +59,33 @@ namespace Auto.SelenuimTester
         [Test]
         public void BacLoginTestSuccess()
         {
-            BacSetMethods.Set(driver, "Email", ItemType.ID, Actions.SendKey, "noman.nazar@dgsworld.com");
-            BacSetMethods.Set(driver, "Password", ItemType.ID, Actions.SendKey, "test777");
-            BacSetMethods.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
+            BacProvider.Set(driver, "Email", ItemType.ID, Actions.SendKey, "noman.nazar@dgsworld.com");
+            BacProvider.Set(driver, "Password", ItemType.ID, Actions.SendKey, "test777");
+            BacProvider.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
         }
 
         [Test]
         public void BacLoginTestFailUsername()
         {
-            BacSetMethods.Set(driver, "Email", ItemType.ID, Actions.SendKey, "");
-            BacSetMethods.Set(driver, "Password", ItemType.ID, Actions.SendKey, "test777");
-            BacSetMethods.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
+            BacProvider.Set(driver, "Email", ItemType.ID, Actions.SendKey, "");
+            BacProvider.Set(driver, "Password", ItemType.ID, Actions.SendKey, "test777");
+            BacProvider.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
         }
 
         [Test]
         public void BacLoginTestFailPassword()
         {
-            BacSetMethods.Set(driver, "Email", ItemType.ID, Actions.SendKey, "noman.nazar@dgsworld.com");
-            BacSetMethods.Set(driver, "Password", ItemType.ID, Actions.SendKey, "");
-            BacSetMethods.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
+            BacProvider.Set(driver, "Email", ItemType.ID, Actions.SendKey, "noman.nazar@dgsworld.com");
+            BacProvider.Set(driver, "Password", ItemType.ID, Actions.SendKey, "");
+            BacProvider.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
         }
 
         [Test]
         public void BacLoginTestFailIncorrect()
         {
-            BacSetMethods.Set(driver, "Email", ItemType.ID, Actions.SendKey, "noman.nazar@dgsworld.com");
-            BacSetMethods.Set(driver, "Password", ItemType.ID, Actions.SendKey, "adasd");
-            BacSetMethods.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
+            BacProvider.Set(driver, "Email", ItemType.ID, Actions.SendKey, "noman.nazar@dgsworld.com");
+            BacProvider.Set(driver, "Password", ItemType.ID, Actions.SendKey, "adasd");
+            BacProvider.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
         }
 
         [TearDown]
