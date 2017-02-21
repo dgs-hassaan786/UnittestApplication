@@ -17,7 +17,7 @@ namespace Auto.SelenuimTester
     {
         IWebDriver driver = new ChromeDriver();
 
-        public static void Main()
+        public void Sample()
         {
 
             //Console.Write("Enter Text: ");
