@@ -15,7 +15,7 @@ namespace Auto.SelenuimTester
     [TestFixture]
     class Program
     {
-        IWebDriver driver = new ChromeDriver();
+        //IWebDriver driver = new ChromeDriver();
 
         public void Sample()
         {
@@ -47,52 +47,79 @@ namespace Auto.SelenuimTester
             //Console.ReadLine();
         }
 
-        [SetUp]
+        //[SetUp]
         public void Initialize()
         {
             //Navigate to Google page
-            driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["MainUrl"]);
+            //driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["MainUrl"]);
         }       
 
         [Test]
         public void BacLoginTestSuccess()
         {
-            BacProvider.Set(driver, "Email", ItemType.ID, Actions.SendKey, "noman.nazar@dgsworld.com");
-            BacProvider.Set(driver, "Password", ItemType.ID, Actions.SendKey, "test777");
-            BacProvider.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
+            using (IWebDriver driver = new ChromeDriver())
+            {
+                driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["MainUrl"]);
+                BacProvider.Set(driver, "Email", ItemType.ID, Actions.SendKey, "noman.nazar@dgsworld.com");
+                BacProvider.Set(driver, "Password", ItemType.ID, Actions.SendKey, "test777");
+                BacProvider.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
+                driver.Quit();
+                Console.WriteLine("Closed the browser.");
+            }
         }
 
         [Test]
         public void BacLoginTestFailUsername()
         {
-            BacProvider.Set(driver, "Email", ItemType.ID, Actions.SendKey, "");
-            BacProvider.Set(driver, "Password", ItemType.ID, Actions.SendKey, "test777");
-            BacProvider.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
+            using (IWebDriver driver = new ChromeDriver())
+            {
+                driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["MainUrl"]);
+                BacProvider.Set(driver, "Email", ItemType.ID, Actions.SendKey, "");
+                BacProvider.Set(driver, "Password", ItemType.ID, Actions.SendKey, "test777");
+                BacProvider.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
+                driver.Quit();
+                Console.WriteLine("Closed the browser.");
+            }
+            
         }
 
         [Test]
         public void BacLoginTestFailPassword()
         {
-            BacProvider.Set(driver, "Email", ItemType.ID, Actions.SendKey, "noman.nazar@dgsworld.com");
-            BacProvider.Set(driver, "Password", ItemType.ID, Actions.SendKey, "");
-            BacProvider.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
+            using (IWebDriver driver = new ChromeDriver())
+            {
+                driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["MainUrl"]);
+                BacProvider.Set(driver, "Email", ItemType.ID, Actions.SendKey, "noman.nazar@dgsworld.com");
+                BacProvider.Set(driver, "Password", ItemType.ID, Actions.SendKey, "");
+                BacProvider.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
+                driver.Quit();
+                Console.WriteLine("Closed the browser.");
+            }
+            
         }
 
         [Test]
         public void BacLoginTestFailIncorrect()
         {
-            BacProvider.Set(driver, "Email", ItemType.ID, Actions.SendKey, "noman.nazar@dgsworld.com");
-            BacProvider.Set(driver, "Password", ItemType.ID, Actions.SendKey, "adasd");
-            BacProvider.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
+            using (IWebDriver driver = new ChromeDriver())
+            {
+                driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["MainUrl"]);
+                BacProvider.Set(driver, "Email", ItemType.ID, Actions.SendKey, "noman.nazar@dgsworld.com");
+                BacProvider.Set(driver, "Password", ItemType.ID, Actions.SendKey, "adasd");
+                BacProvider.Set(driver, "signinbtn", ItemType.ID, Actions.Click);
+                driver.Quit();
+                Console.WriteLine("Closed the browser.");
+            }
+            
         }
 
-        [TearDown]
+        //[TearDown]
         public void CleanUp()
         {
             //Close the driver
             //uncomment this code if want to automatically close the drive
             //driver.Close();
-            driver.Quit();
+            //driver.Quit();
             Console.WriteLine("Closed the browser.");
         }
     }
