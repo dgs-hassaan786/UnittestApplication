@@ -113,6 +113,32 @@ namespace Auto.SelenuimTester
             
         }
 
+        [Test]
+        public void BacForgetPasswordFail()
+        {
+            using (IWebDriver driver = new ChromeDriver())
+            {
+                driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["ForgetPassword"]);
+                BacProvider.Set(driver, "resetlinkbtn", ItemType.ID, Actions.Click);
+                driver.Quit();
+                Console.WriteLine("Closed the browser.");
+            }
+        }
+
+        [Test]
+        public void BacForgetPasswordPassword()
+        {
+            using (IWebDriver driver = new ChromeDriver())
+            {
+                driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["ForgetPassword"]);
+                BacProvider.Set(driver, "Email", ItemType.ID, Actions.SendKey, "noman.nazar@dgsworld.com");
+                BacProvider.Set(driver, "resetlinkbtn", ItemType.ID, Actions.Click);
+                driver.Quit();
+                Console.WriteLine("Closed the browser.");
+            }
+        }
+
+
         //[TearDown]
         public void CleanUp()
         {
