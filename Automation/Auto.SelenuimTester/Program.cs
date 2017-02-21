@@ -17,36 +17,34 @@ namespace Auto.SelenuimTester
     {
         IWebDriver driver = new ChromeDriver();
 
-        public static void Main() {
+        public static void Main()
+        {
 
-            Console.Write("Enter Text: ");
-            var text = Console.ReadLine();
+            //Console.Write("Enter Text: ");
+            //var text = Console.ReadLine();
 
-            Console.Write("Enter Key: ");
-            var key = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter Key: ");
+            //var key = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Encode or decode(0 or 1): ");
-            var code = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Encode or decode(0 or 1): ");
+            //var code = Convert.ToInt32(Console.ReadLine());
 
-            char[] az = Enumerable.Range('a', 'z' - 'a' + 1).Select(i => (Char)i).ToArray();
-            var txtAZ = text.Select(i => (Char)i).ToArray();
+            //char[] az = Enumerable.Range('a', 'z' - 'a' + 1).Select(i => (Char)i).ToArray();
+            //var txtAZ = text.Select(i => (Char)i).ToArray();
 
-            //var convertedArray = new Char[txtAZ.Length];
+            ////var convertedArray = new Char[txtAZ.Length];
 
-            var strBuilder = new StringBuilder();
+            //var strBuilder = new StringBuilder();
 
-            for(var i =0; i < txtAZ.Length; i++)
-            {
-                //ykzmyquetmeemmz
-                //convertedArray[i] = az[(Array.IndexOf(az, txtAZ[i]) % 26)];
-                strBuilder.Append(az[( (code == 0 ? (Array.IndexOf(az, txtAZ[i]) + key) : (Array.IndexOf(az, txtAZ[i]) - key) < 0 ? (26 - (Array.IndexOf(az, txtAZ[i]) - key)) : (Array.IndexOf(az, txtAZ[i]) - key)) % 26)]);
-            }
+            //for(var i =0; i < txtAZ.Length; i++)
+            //{
+            //    //ykzmyquetmeemmz
+            //    //convertedArray[i] = az[(Array.IndexOf(az, txtAZ[i]) % 26)];
+            //    strBuilder.Append(az[( (code == 0 ? (Array.IndexOf(az, txtAZ[i]) + key) : (Array.IndexOf(az, txtAZ[i]) - key) < 0 ? (26 - (Array.IndexOf(az, txtAZ[i]) - key)) : (Array.IndexOf(az, txtAZ[i]) - key)) % 26)]);
+            //}
 
-            Console.WriteLine($"Converted text: { strBuilder.ToString() }");
-
-            Console.ReadLine();
-
-
+            //Console.WriteLine($"Converted text: { strBuilder.ToString() }");
+            //Console.ReadLine();
         }
 
         [SetUp]
