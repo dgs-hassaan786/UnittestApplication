@@ -5,6 +5,3 @@
 /// <reference path="js/app/User/user.js" />
 /// <reference path="js/app/User/user-spec.js" />
 /// <reference path="js/site.js" />
-/// <reference path="lib/angular/angular.js" />
-/// <reference path="lib/angular-mocks/angular-mocks.js" />
-/// <reference path="lib/jquery/dist/jquery.js" />
