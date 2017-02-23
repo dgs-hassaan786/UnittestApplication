@@ -19,7 +19,6 @@ namespace Auto.SelenuimTester
 
         public void Sample()
         {
-
             //Console.Write("Enter Text: ");
             //var text = Console.ReadLine();
 
