@@ -118,7 +118,7 @@ namespace Auto.SelenuimTester
             using (IWebDriver driver = new ChromeDriver())
             {
                 driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["ForgetPassword"]);
-                BacProvider.Set(driver, "resetlinkbtn", ItemType.ID, Actions.Click);
+                //BacProvider.Set(driver, "resetlinkbtn", ItemType.ID, Actions.Click);
                 driver.Quit();
                 Console.WriteLine("Closed the browser.");
             }
